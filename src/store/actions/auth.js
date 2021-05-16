@@ -1,3 +1,4 @@
+//API key of firebase removed for protection.
 import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
@@ -48,9 +49,9 @@ export const auth = (email, password, isSignup) => {
             password: password,
             returnSecureToken: true
         };
-        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyD9x5KJDCLwZep1qeFWtw0J7OjWELGI36E';
+        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=<editkey>';
         if (!isSignup) {
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD9x5KJDCLwZep1qeFWtw0J7OjWELGI36E';
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=<editkey>';
         }
         axios.post(url, authData)
             .then(response => {
